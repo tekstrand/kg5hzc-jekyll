@@ -1,0 +1,23 @@
+$font-size-base: 18px;
+
+@import 'bootstrap';
+
+body {
+  padding-top: 50px;
+}
+
+.content {
+  padding-top: 40px;
+}
+
+.navbar-brand {
+    font-size: 18px;
+}
+
+.nav > li > a {
+    font-size: 14px;
+}
+
+.panel--comments {
+    margin-top: 100px;
+}

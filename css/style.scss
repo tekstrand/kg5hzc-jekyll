@@ -1,0 +1,25 @@
+---
+sitemap:
+    exclude: yes
+---
+
+// add bootstrap variable settings here
+
+$font-size-base: 18px;
+@import 'bootstrap';
+
+body {
+  padding-top: 50px;
+}
+
+.content {
+  padding-top: 40px;
+}
+
+.navbar-brand {
+    font-size: 18px;
+}
+
+.nav > li > a {
+    font-size: 14px;
+}
