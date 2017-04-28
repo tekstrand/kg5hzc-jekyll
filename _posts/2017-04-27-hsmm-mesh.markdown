@@ -1,7 +1,0 @@
----
-layout: post
-title:  KG5HZC
-date:   2017-04-27 15:48:03 -0500
-permalink: /hsmm-mesh/
----
-# KG5HZC
