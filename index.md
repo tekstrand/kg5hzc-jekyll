@@ -20,5 +20,3 @@ BaoFeng UV-5R, Nagoya 701, Magnetic Mount
 **Common Frequencies**
 
 147.320(N5OAK), 146.860(N0GSZ), 145.110(145.110)
-
-<br><br><br><br><br><br><br><br><br><br><br><br>Leave a comment!
