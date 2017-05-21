@@ -5,6 +5,7 @@
 layout: default
 title: Home
 order: 1
+comments: yes
 ---
 
 ### Tommy Ekstrand

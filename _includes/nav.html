@@ -10,18 +10,7 @@
             <a class="navbar-brand" href="/">{{ site.title }}</a>
         </div>
         <div id="navbar" class="collapse navbar-collapse">
-            <ul class="nav navbar-nav">
-                {% assign pages_list = site.pages | sort:"order" %}
-                {% for item in pages_list %}
-                    {% if item.title %}
-                        {% if page.url == item.url %}
-                            <li class="active"><a href="{{ item.url }}" title="{{ item.title }}">{{ item.title }}</a></li>
-                        {% else %}
-                            <li><a href="{{ item.url }}" title="{{ item.title }}">{{ item.title }}</a></li>
-                        {% endif %}
-                    {% endif %}
-                {% endfor %}
-            </ul>
+            {% include nav_list.html context="/" %}
         </div>
     </div>
 </nav>

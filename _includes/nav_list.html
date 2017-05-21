@@ -1,0 +1,36 @@
+{% capture html %}
+<ul class="{% if include.context == '/' %}nav navbar-nav{% else %}dropdown-menu{% endif %}">
+
+    {% if include.context == "/" %}
+        <li class="{% if page.url == "/" %}active{% endif %}">
+            <a href="{{ site.baseurl }}/">Home</a>
+        </li>
+    {% endif %}
+
+    {% assign entries = site.pages | sort: "path" %}
+    {% for entry in entries %}
+
+        {% capture slug    %}{{ entry.url | split: "/"   | last                       }}{% endcapture %}
+        {% capture current %}{{ entry.url | remove: slug | remove: "//" | append: "/" }}{% endcapture %}
+
+        {% if entry.title %}
+            {% if current == include.context %}
+                <li class="{% if page.url contains entry.url %}active{% endif %}{% if entry.dropdown %} dropdown{% endif%}">
+                    <a 
+                        href="{{ site.baseurl }}{{ entry.url }}" 
+                        title="{{ entry.title }}"
+                        {% if entry.dropdown %}
+                            class="dropdown-toggle"
+                            data-toggle="dropdown" 
+                            role="button" 
+                            aria-haspopup="true" 
+                            aria-expanded="false"
+                        {% endif %}
+                    >{{ entry.title }}{%if entry.dropdown %}<span class="caret"></span>{% endif %}</a>
+                    {% include nav_list.html context=entry.url %}
+                </li>
+            {% endif %}
+        {% endif %}
+    {% endfor %}
+</ul>
+{% endcapture %}{{ html | strip_newlines | replace:'    ','' | replace:'    ','' | replace:'  ',' ' }}
